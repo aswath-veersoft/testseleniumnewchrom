@@ -4,7 +4,8 @@ jdk:
   oraclejdk8
 
 ci:
-  - "export DISPLAY=:99.0"
+  - nohup sudo Xvfb :10 -ac
+  - export DISPLAY=:10
   - mvn appengine:test
 integrations:
   notifications:

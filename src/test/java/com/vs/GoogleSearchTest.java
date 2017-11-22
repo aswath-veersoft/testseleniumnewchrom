@@ -9,7 +9,7 @@ import junit.framework.TestCase;
 public class GoogleSearchTest extends TestCase {
 	
 	public void testNewChrome() {
-	    System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");;
+	    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");;
 	    
 	    // Create object of ChromeOptions class
 	    ChromeOptions options = new ChromeOptions();
