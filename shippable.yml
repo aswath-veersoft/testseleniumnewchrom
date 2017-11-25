@@ -5,7 +5,7 @@ jdk:
 
 build:
   ci:
-    - nohup sudo Xvfb :10 -ac
+    - Xvfb :10 -ac &
     - export DISPLAY=:10
     - mvn appengine:test
 
