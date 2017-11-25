@@ -7,7 +7,7 @@ build:
   ci:
     - Xvfb :10 -ac &
     - export DISPLAY=:10
-    - mvn appengine:test
+    - mvn -B test
 
 integrations:
   notifications:
