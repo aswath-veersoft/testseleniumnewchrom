@@ -1,12 +1,14 @@
 language: java
 
 jdk:
-  oraclejdk8
+  - oraclejdk8
 
-ci:
-  - nohup sudo Xvfb :10 -ac
-  - export DISPLAY=:10
-  - mvn appengine:test
+build:
+  ci:
+    - nohup sudo Xvfb :10 -ac
+    - export DISPLAY=:10
+    - mvn appengine:test
+
 integrations:
   notifications:
     - integrationName: email
