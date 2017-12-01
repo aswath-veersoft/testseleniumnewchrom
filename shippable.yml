@@ -7,7 +7,8 @@ build:
   ci:
     - Xvfb :10 -ac &
     - export DISPLAY=:10
-    - mvn -B test
+    - adduser --disabled-password --gecos "" newuser
+    - su -c "mvn appengine:test" newuser
 
 integrations:
   notifications:
