@@ -8,6 +8,7 @@ build:
     - Xvfb :10 -ac &
     - export DISPLAY=:10
     - adduser --disabled-password --gecos "" newuser
+    - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR
     - su -c "mvn appengine:test" newuser
 
 integrations:
